@@ -1,0 +1,22 @@
+{
+  "version": 2,
+  "name": "tickerview-api",
+
+  "functions": {
+    "api/chat.js": { "runtime": "nodejs20.x", "memory": 128, "maxDuration": 15 },
+    "api/ping.js": { "runtime": "nodejs20.x", "memory": 128, "maxDuration": 5  }
+  },
+
+  "routes": [
+    {
+      "src"    : "/api/chat",
+      "methods": ["OPTIONS", "POST", "GET"],
+      "dest"   : "/api/chat"
+    },
+    {
+      "src"    : "/api/ping",
+      "methods": ["OPTIONS", "GET"],
+      "dest"   : "/api/ping"
+    }
+  ]
+}
